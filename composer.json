@@ -1,0 +1,23 @@
+{
+    "name": "yamalweb/galaxycms-slider",
+    "description": "slider for galaxycms",
+    "type": "yii2-extension",
+    "keywords": ["yii2","galaxycms"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "o.starigin",
+            "email": "info@yamal-web.ru"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*",
+        "mongosoft/yii2-upload-behavior": "*",
+        "himiklab/yii2-sortable-grid-view-widget": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "yamalweb\\slider\\": ""
+        }
+    }
+}
