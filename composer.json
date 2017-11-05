@@ -1,6 +1,6 @@
 {
-    "name": "yamalweb/galaxycms-slider",
-    "description": "slider for galaxycms",
+    "name": "yamalweb/slider",
+    "description": "slider",
     "type": "yii2-extension",
     "keywords": ["yii2","galaxycms"],
     "license": "MIT",
