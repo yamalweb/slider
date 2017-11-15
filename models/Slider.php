@@ -22,14 +22,24 @@ use himiklab\sortablegrid\SortableGridBehavior;
  * @property string $update_datetime
  * @property integer $is_public
  */
-class Slider extends \yii\db\ActiveRecord
+class Slider extends \yii\db\ActiveRecord implements \dixonstarter\togglecolumn\ToggleActionInterface
 {
+    use \dixonstarter\togglecolumn\ToggleActionTrait;
     /**
      * @inheritdoc
      */
     public static function tableName()
     {
         return 'slider';
+    }
+
+    public function getToggleItems()
+    {
+        // custom array for toggle update
+        return  [
+            'on' => ['value'=>1, 'label'=>'Опубликовать'],
+            'off' => ['value'=>0, 'label'=>'Снять с публикации'],
+        ];
     }
 
     /**

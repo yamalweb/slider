@@ -5,7 +5,7 @@ use yii\helpers\Html;
 use himiklab\sortablegrid\SortableGridView as GridView;
 
 use kartik\icons\Icon;
-
+use yii\widgets\Pjax;
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
 $this->title = 'Слайды';
@@ -19,10 +19,11 @@ $this->params['breadcrumbs'][] = $this->title;
     <p>
         <?= Html::a('Создать блог', ['create'], ['class' => 'btn btn-success']); ?>
     </p>
-
+    <?php Pjax::begin();?>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
+        'tableOptions'=>['class'=>'table table-hover'],
         'summary' => '',
         'columns' => [
             [
@@ -52,9 +53,12 @@ $this->params['breadcrumbs'][] = $this->title;
             ],*/
             [
                 'attribute' => 'is_public',
-                'value' => function ($model) {
+                /*'value' => function ($model) {
                     return $model->is_public==1?"да":"нет";
-                },
+                },*/
+                'class'=>'\dixonstarter\togglecolumn\ToggleColumn',
+                'linkTemplateOn'=>'<a class="toggle-column btn btn-primary btn-xs btn-block" data-pjax="0" href="{url}"><i  class="glyphicon glyphicon-ok"></i> {label}</a>',
+                'linkTemplateOff'=>'<a class="toggle-column btn btn-default btn-xs btn-block" data-pjax="0" href="{url}"><i  class="glyphicon glyphicon-remove"></i> {label}</a>'
             ],
             [
                 'class' => 'yii\grid\ActionColumn',
@@ -62,5 +66,5 @@ $this->params['breadcrumbs'][] = $this->title;
             ],
         ],
     ]); ?>
-
+    <?php Pjax::end();?>
 </div>

@@ -25,6 +25,11 @@ class SliderController extends Controller
                 'class' => SortableGridAction::className(),
                 'modelName' => Slider::className(),
             ],
+            'toggle-update'=>[
+                'class'=>'\dixonstarter\togglecolumn\actions\ToggleAction',
+                'attribute'=>'is_public',
+                'modelClass'=>Slider::className()
+            ]
 
         ];
     }

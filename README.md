@@ -10,7 +10,7 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-composer require --prefer-dist "yamalweb/galaxycms-price" "dev-master"
+composer require --prefer-dist "yamalweb/galaxycms-slider" "dev-master"
 
 ```
 

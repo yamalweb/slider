@@ -13,7 +13,8 @@
     "require": {
         "yiisoft/yii2": "*",
         "mongosoft/yii2-upload-behavior": "*",
-        "himiklab/yii2-sortable-grid-view-widget": "*"
+        "himiklab/yii2-sortable-grid-view-widget": "*",
+        "dixonstarter/yii2-toggle-column": "*"
     },
     "autoload": {
         "psr-4": {
