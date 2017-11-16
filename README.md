@@ -10,14 +10,14 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-composer require --prefer-dist "yamalweb/galaxycms-slider" "dev-master"
+composer require --prefer-dist "yamalweb/slider" "*"
 
 ```
 
 or add
 
 ```
-"galaxycms-slider/galaxycms-slider": "dev-master"
+"galaxycms-slider/galaxycms-slider": "*"
 ```
 
 to the require section of your `composer.json` file.
