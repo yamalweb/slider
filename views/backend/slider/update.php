@@ -5,8 +5,8 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model yamalweb\galaxycmsblog\models\Blog */
 
-$this->title = 'Редактирование страницы Блога: ' . ' ' . $model->title;
-$this->params['breadcrumbs'][] = ['label' => 'Страницы Блога', 'url' => ['admin']];
+$this->title = 'Редактирование Слайда: ' . ' ' . $model->title;
+$this->params['breadcrumbs'][] = ['label' => 'Слайды', 'url' => ['admin']];
 $this->params['breadcrumbs'][] = ['label' => $model->title, 'url' => ['view', 'id' => $model->id]];
 $this->params['breadcrumbs'][] = 'Редактирование';
 ?>

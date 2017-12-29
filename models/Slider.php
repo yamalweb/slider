@@ -64,13 +64,13 @@ class Slider extends \yii\db\ActiveRecord implements \dixonstarter\togglecolumn\
     {
         return [
             'id' => 'ID',
-            'title' => 'Title',
-            'description' => 'Description',
-            'pic' => 'Pic',
-            'url' => 'Url',
-            'create_datetime' => 'Create Datetime',
-            'update_datetime' => 'Update Datetime',
-            'is_public' => 'Is Public',
+            'title' => 'Заголовок',
+            'description' => 'Описание',
+            'pic' => 'Изображение',
+            'url' => 'Ссылка',
+            'create_datetime' => 'Дата/время создания',
+            'update_datetime' => 'Дата/время изменения',
+            'is_public' => 'Опубликовано?',
         ];
     }
 
@@ -82,7 +82,7 @@ class Slider extends \yii\db\ActiveRecord implements \dixonstarter\togglecolumn\
                 'class' => UploadImageBehavior::className(),
                 'attribute' => 'pic',
                 'scenarios' => ['insert', 'update'],
-                //'placeholder' => '@frontend/web/uploads/news/no-image.jpg',
+                'placeholder' => '@frontend/web/uploads/news/no-image.jpg',
                 'path' => '@frontend/web/public/slider',//\Yii::$app->params['uploadPathDocument']
                 'url' => '@web/public/slider',
                 /*'unlinkOnSave' => false,
