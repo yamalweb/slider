@@ -37,8 +37,8 @@ class Slider extends \yii\db\ActiveRecord implements \dixonstarter\togglecolumn\
     {
         // custom array for toggle update
         return  [
-            'on' => ['value'=>1, 'label'=>'Опубликовать'],
-            'off' => ['value'=>0, 'label'=>'Снять с публикации'],
+            'on' => ['value'=>1, 'label'=>'Снять с публикации'],
+            'off' => ['value'=>0, 'label'=>'Опубликовать'],
         ];
     }
 
@@ -82,7 +82,7 @@ class Slider extends \yii\db\ActiveRecord implements \dixonstarter\togglecolumn\
                 'class' => UploadImageBehavior::className(),
                 'attribute' => 'pic',
                 'scenarios' => ['insert', 'update'],
-                'placeholder' => '@frontend/web/uploads/news/no-image.jpg',
+                //'placeholder' => '@frontend/web/public/slider/no-image.jpg',
                 'path' => '@frontend/web/public/slider',//\Yii::$app->params['uploadPathDocument']
                 'url' => '@web/public/slider',
                 /*'unlinkOnSave' => false,
