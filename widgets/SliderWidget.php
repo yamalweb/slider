@@ -14,6 +14,7 @@ class SliderWidget extends \yii\base\Widget
 
     public $controlsVisible = true;
     public $controls = [];
+    public $urlClass = 'btn btn-success btn-lg';
 
     private $items;
 
@@ -55,7 +56,7 @@ class SliderWidget extends \yii\base\Widget
     private function getUrl($model){
 
         return $model->url?Html::a('Подробнее...',$model->url,['target'=>'_blank',
-            'class'=>'btn btn-success btn-lg']):'';
+            'class'=>$this->urlClass]):'';
 
     }
 }
