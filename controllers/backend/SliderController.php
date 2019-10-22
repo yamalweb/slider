@@ -1,10 +1,10 @@
 <?php
 
-namespace yamalweb\slider\controllers\backend;
+namespace common\modules\slider\controllers\backend;
 
 use Yii;
-use yamalweb\slider\models\Slider;
-use yamalweb\slider\models\SliderSearch;
+use common\modules\slider\models\Slider;
+use common\modules\slider\models\SliderSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -25,11 +25,7 @@ class SliderController extends Controller
                 'class' => SortableGridAction::className(),
                 'modelName' => Slider::className(),
             ],
-            'toggle-update'=>[
-                'class'=>'\dixonstarter\togglecolumn\actions\ToggleAction',
-                'attribute'=>'is_public',
-                'modelClass'=>Slider::className()
-            ]
+
 
         ];
     }

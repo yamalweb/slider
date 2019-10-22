@@ -1,6 +1,6 @@
 <?php
 
-namespace yamalweb\slider;
+namespace common\modules\slider;
 
 use yii\helpers\Html;
 

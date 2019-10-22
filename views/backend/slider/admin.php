@@ -45,20 +45,9 @@ $this->params['breadcrumbs'][] = $this->title;
                 'format' => ['datetime', 'php:d.m.Y']
             ],
 
-            /*[
-                'attribute' => 'is_public',
-                'class' => '\kartik\grid\BooleanColumn',
-                'trueLabel' => 'Да',
-                'falseLabel' => 'Нет'
-            ],*/
             [
                 'attribute' => 'is_public',
-                /*'value' => function ($model) {
-                    return $model->is_public==1?"да":"нет";
-                },*/
-                'class'=>'\dixonstarter\togglecolumn\ToggleColumn',
-                'linkTemplateOn'=>'<a class="toggle-column btn btn-primary btn-xs btn-block" data-pjax="0" href="{url}"><i  class="glyphicon glyphicon-ok"></i> {label}</a>',
-                'linkTemplateOff'=>'<a class="toggle-column btn btn-default btn-xs btn-block" data-pjax="0" href="{url}"><i  class="glyphicon glyphicon-remove"></i> {label}</a>'
+
             ],
             [
                 'class' => 'yii\grid\ActionColumn',

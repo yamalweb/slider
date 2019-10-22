@@ -1,12 +1,12 @@
 <?php
 
-namespace yamalweb\slider;
+namespace common\modules\slider;
 
 use yii\web\AssetBundle;
 
 class SliderAsset extends AssetBundle
 {
-    public $sourcePath = '@yamalweb/slider/assets';
+    public $sourcePath = '@common/modules/slider/assets';
     public $css = ['css/main.css'];
 
 }

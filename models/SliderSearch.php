@@ -1,11 +1,11 @@
 <?php
 
-namespace yamalweb\slider\models;
+namespace common\modules\slider\models;
 
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use yamalweb\slider\models\Slider;
+use common\modules\slider\models\Slider;
 
 /**
  * BlogSearch represents the model behind the search form about `common\modules\blog\models\Blog`.

@@ -1,8 +1,8 @@
 <?php
 
-namespace yamalweb\slider\widgets;
+namespace common\modules\slider\widgets;
 
-use yamalweb\slider\models\Slider;
+use common\modules\slider\models\Slider;
 use yii\base\Widget;
 use yii\helpers\Html;
 use yii\helpers\ArrayHelper;
@@ -33,7 +33,7 @@ class SliderWidget extends \yii\base\Widget
         $model = Slider::find()->where(['is_public'=>1])->orderBy('sort_order')->all();
 
         $this->items = ArrayHelper::toArray($model,[
-            'yamalweb\slider\models\Slider' => [
+            'common\modules\slider\models\Slider' => [
                 'content'=>function ($slider) {
                     return Html::img($slider->getThumbUploadUrl('pic', 'preview'), ['style'=>'width: 100%;']);
                 },

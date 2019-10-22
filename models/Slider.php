@@ -1,8 +1,8 @@
 <?php
 
-namespace yamalweb\slider\models;
+namespace common\modules\slider\models;
 
-use yamalweb\slider\Module;
+use common\modules\slider\Module;
 use Yii;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
@@ -22,24 +22,14 @@ use himiklab\sortablegrid\SortableGridBehavior;
  * @property string $update_datetime
  * @property integer $is_public
  */
-class Slider extends \yii\db\ActiveRecord implements \dixonstarter\togglecolumn\ToggleActionInterface
+class Slider extends \yii\db\ActiveRecord
 {
-    use \dixonstarter\togglecolumn\ToggleActionTrait;
     /**
      * @inheritdoc
      */
     public static function tableName()
     {
         return 'slider';
-    }
-
-    public function getToggleItems()
-    {
-        // custom array for toggle update
-        return  [
-            'on' => ['value'=>1, 'label'=>'Снять с публикации'],
-            'off' => ['value'=>0, 'label'=>'Опубликовать'],
-        ];
     }
 
     /**
@@ -79,7 +69,7 @@ class Slider extends \yii\db\ActiveRecord implements \dixonstarter\togglecolumn\
         return [
 
             [
-                'class' => UploadImageBehavior::className(),
+                'class' => \mohorev\file\UploadImageBehavior::className(),
                 'attribute' => 'pic',
                 'scenarios' => ['insert', 'update'],
                 //'placeholder' => '@frontend/web/public/slider/no-image.jpg',
