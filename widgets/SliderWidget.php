@@ -38,8 +38,7 @@ class SliderWidget extends \yii\base\Widget
                     return Html::img($slider->getThumbUploadUrl('pic', 'preview'), ['style'=>'width: 100%;']);
                 },
                 'caption'=>function ($slider) {
-                    return '<h2>'.$slider->title.'</h2>'."<p>$slider->description</p>".self::getUrl($slider)
-                        ;
+                    return '<h2>'.$slider->title.'</h2>'."<p>$slider->description</p>".self::getUrl($slider);
                 },
             ],
         ]);
@@ -47,7 +46,7 @@ class SliderWidget extends \yii\base\Widget
 
     public function run(){
 
-        return $this->render('slider.php',[
+        return $this->render('slider',[
             'items'=>$this->items,
             'controls'=>$this->controls
         ]);
@@ -55,7 +54,7 @@ class SliderWidget extends \yii\base\Widget
 
     private function getUrl($model){
 
-        return $model->url?Html::a('Подробнее...',$model->url,['target'=>'_blank',
+        return $model->url?Html::a($model->button_text?$model->button_text:'Подробнее...', $model->url,['target'=>'_blank',
             'class'=>$this->urlClass]):'';
 
     }

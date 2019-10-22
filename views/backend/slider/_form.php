@@ -34,7 +34,11 @@ use kartik\select2\Select2;
             <?= $form->field($model, 'description')->textarea(['rows' => 6]) ?>
             </div>
         </div>
-
+        <div class="row">
+            <div class="col-lg-12">
+                <?= $form->field($model, 'button_text')->textInput(['maxlength' => true]) ?>
+            </div>
+        </div>
         <div class="row">
             <div class="col-lg-6">
                 <div class="form-group">

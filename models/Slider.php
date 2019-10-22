@@ -4,10 +4,6 @@ namespace common\modules\slider\models;
 
 use common\modules\slider\Module;
 use Yii;
-use yii\helpers\ArrayHelper;
-use yii\helpers\Html;
-use yii\helpers\Url;
-use mongosoft\file\UploadImageBehavior;
 use himiklab\sortablegrid\SortableGridBehavior;
 
 /**
@@ -43,7 +39,7 @@ class Slider extends \yii\db\ActiveRecord
             [['title'], 'required'],
             [['create_datetime', 'update_datetime'], 'safe'],
             [['is_public','sort_order'], 'integer'],
-            [['title'], 'string', 'max' => 255],
+            [['title','button_text'], 'string', 'max' => 255],
         ];
     }
 
@@ -58,6 +54,7 @@ class Slider extends \yii\db\ActiveRecord
             'description' => 'Описание',
             'pic' => 'Изображение',
             'url' => 'Ссылка',
+            'button_text'=> 'Текст кнопки',
             'create_datetime' => 'Дата/время создания',
             'update_datetime' => 'Дата/время изменения',
             'is_public' => 'Опубликовано?',
@@ -75,8 +72,6 @@ class Slider extends \yii\db\ActiveRecord
                 //'placeholder' => '@frontend/web/public/slider/no-image.jpg',
                 'path' => '@frontend/web/public/slider',//\Yii::$app->params['uploadPathDocument']
                 'url' => '@web/public/slider',
-                /*'unlinkOnSave' => false,
-                'unlinkOnDelete' => false,*/
                 'thumbs' => [
                     'thumb' => ['width' => 80, 'quality' => 90],
                     'preview' => ['width' => 1425, 'height' => 540,'mode'=>Module::THUMBNAIL_OUTBOUND],
