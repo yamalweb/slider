@@ -45,11 +45,12 @@ class SliderWidget extends \yii\base\Widget
     }
 
     public function run(){
-
-        return $this->render('slider',[
-            'items'=>$this->items,
-            'controls'=>$this->controls
-        ]);
+        if($this->items) {
+            return $this->render('slider', [
+                'items' => $this->items,
+                'controls' => $this->controls
+            ]);
+        }
     }
 
     private function getUrl($model){
