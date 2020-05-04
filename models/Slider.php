@@ -69,7 +69,7 @@ class Slider extends \yii\db\ActiveRecord
                 'class' => \mohorev\file\UploadImageBehavior::className(),
                 'attribute' => 'pic',
                 'scenarios' => ['insert', 'update'],
-                //'placeholder' => '@frontend/web/public/slider/no-image.jpg',
+                //'placeholder' => '@frontend/web/images/qr-code.gif',
                 'path' => '@frontend/web/public/slider',//\Yii::$app->params['uploadPathDocument']
                 'url' => '@web/public/slider',
                 'thumbs' => [
